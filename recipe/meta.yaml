@@ -1,5 +1,5 @@
 {% set name = "hatch" %}
-{% set version = "1.3.1" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hatch-{{ version }}.tar.gz
-  sha256: fb1bdad4a22d3443137036b246898c5d3c7552ff4ba399b4605548cef0a22496
+  sha256: a1b06523cf66c759828f21145d8619044049b9ef660accef42d47612e7b7fda2
 
 build:
   noarch: python
@@ -25,6 +25,7 @@ requirements:
     - click >=8.0.3
     - hatchling >=1.4.1
     - httpx >=0.22.0
+    - hyperlink >=21.0.0
     - keyring >=23.5.0
     - pexpect >=4.8
     - platformdirs >=2.5.0
