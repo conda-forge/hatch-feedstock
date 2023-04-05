@@ -1,11 +1,11 @@
-About hatch
-===========
+About hatch-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hatch-feedstock/blob/main/LICENSE.txt)
 
 Home: https://hatch.pypa.io/latest/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hatch-feedstock/blob/main/LICENSE.txt)
 
 Summary: Modern, extensible Python project management
 
