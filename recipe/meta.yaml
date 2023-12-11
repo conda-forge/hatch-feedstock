@@ -20,16 +20,15 @@ requirements:
   host:
     - pip
     - python >=3.7
-    - hatchling >=1.14.0
+    - hatchling >=1.19.0
   run:
-    - click >=8.0.3
-    - hatchling >=1.14.0
+    - click >=8.0.6
+    - hatchling >=1.19.0
     - httpx >=0.22.0
     - hyperlink >=21.0.0
     - keyring >=23.5.0
     - pexpect >=4.8
     - platformdirs >=2.5.0
-    - pyperclip >=1.8.2
     - python >=3.7
     - rich >=11.2.0
     - shellingham >=1.4.0
