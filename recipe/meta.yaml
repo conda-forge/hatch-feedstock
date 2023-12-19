@@ -1,5 +1,5 @@
 {% set name = "hatch" %}
-{% set version = "1.8.1" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hatch-{{ version }}.tar.gz
-  sha256: fdc574184dcb1d52a63a3cfd08431bf674ad3be2fd7316cbf5fb6d4bdbc3032f
+  sha256: e1e6a511e152ec7cd4dbabc4f4f6a1874870bd49c97d17d390b9232dda685ce3
 
 build:
   noarch: python
@@ -20,11 +20,11 @@ requirements:
   host:
     - pip
     - python >=3.8
-    - hatchling >=1.19.0
+    - hatchling >=1.21.0
     - hatch-vcs >=0.4.0
   run:
     - click >=8.0.6
-    - hatchling >=1.19.0
+    - hatchling >=1.21.0
     - httpx >=0.22.0
     - hyperlink >=21.0.0
     - keyring >=23.5.0
