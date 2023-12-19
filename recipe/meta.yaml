@@ -21,6 +21,7 @@ requirements:
     - pip
     - python >=3.8
     - hatchling >=1.19.0
+    - hatch-vcs >=0.4.0
   run:
     - click >=8.0.6
     - hatchling >=1.19.0
