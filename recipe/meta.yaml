@@ -37,6 +37,7 @@ requirements:
     - tomlkit >=0.10.1
     - userpath >=1.7
     - virtualenv >=20.13.1
+    - zstandard <1.0
 
 test:
   imports:
