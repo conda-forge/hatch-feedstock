@@ -54,6 +54,7 @@ test:
   requires:
     - pip
     - pytest
+    - pytest-mock
 
 about:
   home: https://hatch.pypa.io/latest/
