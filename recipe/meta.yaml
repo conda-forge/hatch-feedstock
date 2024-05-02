@@ -50,9 +50,10 @@ test:
     - hatch
   commands:
     - hatch --help
-    - hatch test --randomize --parallel --retries 5 --retry-delay 3
+    - pytest
   requires:
     - pip
+    - pytest
 
 about:
   home: https://hatch.pypa.io/latest/
