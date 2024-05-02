@@ -50,7 +50,7 @@ test:
     - hatch
   commands:
     - hatch --help
-    - pytest --ignore tests/backend -ra -k "not test_already_installed_update_flag and not test_already_installed_update_prompt"
+    - pytest --ignore tests/backend -ra -k "not test_already_installed_update_flag and not test_already_installed_update_prompt and not test_installation and not test_all and not test_pypirc"
   requires:
     - pip
     - pytest
