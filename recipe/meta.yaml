@@ -50,7 +50,7 @@ test:
     - hatch
   commands:
     - hatch --help
-    - pytest
+    - pytest -ra
   requires:
     - pip
     - pytest
