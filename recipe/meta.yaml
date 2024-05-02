@@ -55,6 +55,7 @@ test:
     - pip
     - pytest
     - pytest-mock
+    - pytest-xdist
 
 about:
   home: https://hatch.pypa.io/latest/
