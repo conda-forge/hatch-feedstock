@@ -42,11 +42,15 @@ requirements:
     - zstandard <1.0
 
 test:
+  source_files:
+    - tests
+    - pyproject.toml
+    - hatch.toml
   imports:
     - hatch
   commands:
-    - pip check
     - hatch --help
+    - hatch test --randomize --parallel --retries 5 --retry-delay 3
   requires:
     - pip
 
