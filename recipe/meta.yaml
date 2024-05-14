@@ -1,5 +1,5 @@
 {% set name = "hatch" %}
-{% set version = "1.10.0" %}
+{% set version = "1.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hatch-{{ version }}.tar.gz
-  sha256: 0d68a7d3efa225bedb7a8bb773a347fdc16d5e064aef5fb0411de57cc9abd08a
+  sha256: 0511e48b06576995a51a39af14c062431cbbbf22df8a4faccce41418ebccab30
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: sed -i '/"uv/d' ./pyproject.toml && {{ PYTHON }} -m pip install . -vv
   number: 0
   entry_points:
     - hatch = hatch.cli:main
@@ -50,12 +50,14 @@ test:
     - hatch
   commands:
     - hatch --help
+    - pip check
     - pytest --ignore tests/backend -ra -k "not test_already_installed_update_flag and not test_already_installed_update_prompt and not test_installation and not test_all and not test_pypirc"
   requires:
     - pip
     - pytest
     - pytest-mock
     - pytest-xdist
+    - pyfakefs
     - git
     - rust
 
