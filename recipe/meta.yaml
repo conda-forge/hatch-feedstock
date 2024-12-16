@@ -1,13 +1,13 @@
 {% set name = "hatch" %}
-{% set version = "1.13.0" %}
+{% set version = "1.14.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hatch-{{ version }}.tar.gz
-  sha256: 5e1a75770cfe8f3ebae3abfded3a976238b0acefd19cdabc5245597525b8066f
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hatch-{{ version }}.tar.gz
+  sha256: 351e41bc6c72bc93cb98651212226e495b43549eee27c487832e459e5d0f0eda
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python  {{ python_min }}
     - hatchling >=1.21.0
     - hatch-vcs >=0.4.0
   run:
@@ -31,7 +31,7 @@ requirements:
     - packaging >=23.2
     - pexpect >=4.8,<5
     - platformdirs >=2.5.0
-    - python >=3.8
+    - python >={{ python_min }}
     - rich >=11.2.0
     - shellingham >=1.4.0
     - tomli-w >=1.0
@@ -57,6 +57,7 @@ test:
     - pytest
     - pytest-mock
     - pytest-xdist
+    - python {{ python_min }}
     - pyfakefs
     - git
     - rust
