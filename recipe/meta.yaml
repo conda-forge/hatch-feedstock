@@ -1,13 +1,13 @@
 {% set name = "hatch" %}
-{% set version = "1.13.0" %}
+{% set version = "1.14.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hatch-{{ version }}.tar.gz
-  sha256: 5e1a75770cfe8f3ebae3abfded3a976238b0acefd19cdabc5245597525b8066f
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hatch-{{ version }}.tar.gz
+  sha256: 351e41bc6c72bc93cb98651212226e495b43549eee27c487832e459e5d0f0eda
 
 build:
   noarch: python
