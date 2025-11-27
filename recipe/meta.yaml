@@ -1,5 +1,5 @@
 {% set name = "hatch" %}
-{% set version = "1.14.1" %}
+{% set version = "1.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hatch-{{ version }}.tar.gz
-  sha256: ca1aff788f8596b0dd1f8f8dfe776443d2724a86b1976fabaf087406ba3d0713
+  sha256: bcbf7548a6bab3526ae222f91381d76adccfb5acc656dc09e527621a83e1c02b
 
 build:
   noarch: python
@@ -23,12 +23,15 @@ requirements:
     - hatchling >=1.21.0
     - hatch-vcs >=0.4.0
   run:
+    - backports-zstd >=1.0.0
+    - backports.zstd >=1.0.0
+    - pyproject-hooks
     - click >=8.0.6
-    - hatchling >=1.26.3
+    - hatchling >=1.27.0
     - httpx >=0.22.0
     - hyperlink >=21.0.0
     - keyring >=23.5.0
-    - packaging >=23.2
+    - packaging >=24.2
     - pexpect >=4.8,<5.dev0
     - platformdirs >=2.5.0
     - python >={{ python_min }}
