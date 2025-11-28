@@ -1,5 +1,5 @@
 {% set name = "hatch" %}
-{% set version = "1.14.1" %}
+{% set version = "1.16.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hatch-{{ version }}.tar.gz
-  sha256: ca1aff788f8596b0dd1f8f8dfe776443d2724a86b1976fabaf087406ba3d0713
+  sha256: 87df6a17a0f8dc6f9a8ae459b742cb32ccc844a79634f9072797a2e38af1280f
 
 build:
   noarch: python
@@ -24,22 +24,23 @@ requirements:
     - hatch-vcs >=0.4.0
   run:
     - click >=8.0.6
-    - hatchling >=1.26.3
+    - hatchling >=1.27.0
     - httpx >=0.22.0
     - hyperlink >=21.0.0
     - keyring >=23.5.0
-    - packaging >=23.2
-    - pexpect >=4.8,<5.dev0
+    - packaging >=24.2
+    - pexpect >=4.8,<5
     - platformdirs >=2.5.0
+    - pyproject_hooks
     - python >={{ python_min }}
     - rich >=11.2.0
     - shellingham >=1.4.0
     - tomli-w >=1.0
     - tomlkit >=0.11.1
-    - userpath >=1.7,<2.dev0
-    - virtualenv >=20.26.6
+    - userpath >=1.7,<2
     - uv >=0.5.23
-    - zstandard <1
+    - virtualenv >=20.26.6
+    - backports.zstd >=1
 
 test:
   source_files:
@@ -53,6 +54,7 @@ test:
     - pip check
     - pytest --ignore tests/backend -ra -k "not test_already_installed_update_flag and not test_already_installed_update_prompt and not test_installation and not test_all and not test_pypirc"
   requires:
+    - flit-core
     - pip
     - pytest
     - pytest-mock
