@@ -24,22 +24,22 @@ requirements:
     - hatch-vcs >=0.4.0
   run:
     - click >=8.0.6
-    - hatchling >=1.26.3
+    - hatchling >=1.27.0
     - httpx >=0.22.0
     - hyperlink >=21.0.0
     - keyring >=23.5.0
-    - packaging >=23.2
-    - pexpect >=4.8,<5.dev0
+    - packaging >=24.2
+    - pexpect >=4.8,<5
     - platformdirs >=2.5.0
     - python >={{ python_min }}
     - rich >=11.2.0
     - shellingham >=1.4.0
     - tomli-w >=1.0
     - tomlkit >=0.11.1
-    - userpath >=1.7,<2.dev0
-    - virtualenv >=20.26.6
+    - userpath >=1.7,<2
     - uv >=0.5.23
-    - zstandard <1
+    - virtualenv >=20.26.6
+    - backports.zstd >=1
 
 test:
   source_files:
