@@ -62,8 +62,6 @@ tests:
         - pytest-xdist
         - python ${{ python_min }}.*
         - pyfakefs
-        - tomlkit
-        - tomli-w <1.2.0  # spacing change
         - git
         - rust
     script:
