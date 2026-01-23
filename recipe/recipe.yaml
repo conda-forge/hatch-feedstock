@@ -1,6 +1,6 @@
 context:
   name: hatch
-  version: "1.16.2"
+  version: "1.16.3"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/hatch-${{ version }}.tar.gz
-  sha256: f288938da85b4b90e47d94788e19e9976dcd6fd53b48343ea251a2a37256a980
+  sha256: 2a50ecc912adfc8122cd2ccdcc15254cdef829e5d158be9014180cd7f0fb7ea9
 
 build:
   number: 0
