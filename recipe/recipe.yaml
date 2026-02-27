@@ -1,6 +1,6 @@
 context:
   name: hatch
-  version: "1.16.3"
+  version: 1.16.5
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/hatch-${{ version }}.tar.gz
-  sha256: 2a50ecc912adfc8122cd2ccdcc15254cdef829e5d158be9014180cd7f0fb7ea9
+  sha256: 57bdeeaa72577859ce37091a5449583875331c06f9cb6af9077947ad40b3a1de
 
 build:
   number: 0
@@ -31,7 +31,7 @@ requirements:
     - hyperlink >=21.0.0
     - keyring >=23.5.0
     - packaging >=24.2
-    - pexpect >=4.8,<5
+    - pexpect >=4.8,<5.dev0
     - platformdirs >=2.5.0
     - pyproject_hooks
     - python >=${{ python_min }}
@@ -39,11 +39,12 @@ requirements:
     - shellingham >=1.4.0
     - tomli-w >=1.0
     - tomlkit >=0.11.1
-    - userpath >=1.7,<2
+    - userpath >=1.7,<2.dev0
     - uv >=0.5.23
-    - virtualenv >=20.26.6
-    - backports.zstd >=1
-
+    - virtualenv >=21
+    - backports.zstd >=1.0.0
+    - python-discovery >=1.1
+    - backports-zstd >=1.0.0
 tests:
   - python:
       imports:
