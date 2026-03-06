@@ -44,7 +44,6 @@ requirements:
     - virtualenv >=21
     - backports.zstd >=1.0.0
     - python-discovery >=1.1
-    - backports-zstd >=1.0.0
 tests:
   - python:
       imports:
