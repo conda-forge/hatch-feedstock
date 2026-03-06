@@ -57,7 +57,7 @@ tests:
       run:
         - flit-core
         - pip
-        - packaging <26 # Minor spacing change confuses tests
+        - packaging >=26 # Minor spacing change confuses tests
         - pytest
         - pytest-mock
         - pytest-xdist
