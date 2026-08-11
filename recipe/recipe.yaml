@@ -1,6 +1,6 @@
 context:
   name: hatch
-  version: 1.17.1
+  version: 1.18.0
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/hatch-${{ version }}.tar.gz
-  sha256: e5f2f389ececd7e86cd86863e3f921a9024cd04ce6ef6b36d07cd9a6dc37c9cd
+  sha256: 463d214cb068391454be198e58d3cc0846f71e39d68c5568ba650af7781e8ae3
 
 build:
   number: 0
@@ -45,6 +45,7 @@ requirements:
     - userpath >=1.7,<2.dev0
     - uv >=0.5.23
     - virtualenv >=21
+    - backports-zstd >=1.0.0
 tests:
   - python:
       imports:
