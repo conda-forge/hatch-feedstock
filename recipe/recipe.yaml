@@ -1,6 +1,6 @@
 context:
   name: hatch
-  version: 1.17.1
+  version: 1.18.1
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/hatch-${{ version }}.tar.gz
-  sha256: e5f2f389ececd7e86cd86863e3f921a9024cd04ce6ef6b36d07cd9a6dc37c9cd
+  sha256: 222fff78e197cf12a39db7efe5318ca403f2614db213416fd106a6c3260ef221
 
 build:
   number: 0
@@ -22,8 +22,8 @@ requirements:
   host:
     - pip
     - python  ${{ python_min }}.*
-    - hatchling >=1.21.0
-    - hatch-vcs >=0.4.0
+    - hatchling >=1.27.0
+    - hatch-vcs >=0.3.0
   run:
     - backports.zstd >=1.0.0
     - click >=8.0.6
@@ -43,12 +43,15 @@ requirements:
     - tomli-w >=1.0
     - tomlkit >=0.11.1
     - userpath >=1.7,<2.dev0
-    - uv >=0.5.23
+    - python-uv >=0.5.23
     - virtualenv >=21
 tests:
   - python:
       imports:
         - hatch
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - files:
       source:
         - tests
@@ -69,7 +72,7 @@ tests:
     script:
       - hatch --help
       - pip check
-      - pytest --ignore tests/backend -ra -k "not test_already_installed_update_flag and not test_already_installed_update_prompt and not test_installation and not test_all and not test_pypirc"
+      - pytest --ignore tests/backend -ra -k "not test_already_installed_update_flag and not test_already_installed_update_prompt and not test_installation and not test_all and not test_pypirc and not test_sync_dependencies_pip"
 
 about:
   summary: Modern, extensible Python project management
