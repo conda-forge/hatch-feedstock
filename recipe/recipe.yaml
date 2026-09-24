@@ -22,8 +22,8 @@ requirements:
   host:
     - pip
     - python  ${{ python_min }}.*
-    - hatchling >=1.21.0
-    - hatch-vcs >=0.4.0
+    - hatchling >=1.27.0
+    - hatch-vcs >=0.3.0
   run:
     - backports.zstd >=1.0.0
     - click >=8.0.6
@@ -35,7 +35,7 @@ requirements:
     - packaging >=24.2
     - pexpect >=4.8,<5.dev0
     - platformdirs >=2.5.0
-    - pyproject_hooks
+    - pyproject-hooks
     - python >=${{ python_min }}
     - python-discovery >=1.1
     - rich >=11.2.0
@@ -45,11 +45,13 @@ requirements:
     - userpath >=1.7,<2.dev0
     - uv >=0.5.23
     - virtualenv >=21
-    - backports-zstd >=1.0.0
 tests:
   - python:
       imports:
         - hatch
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - files:
       source:
         - tests
