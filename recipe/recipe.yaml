@@ -35,7 +35,7 @@ requirements:
     - packaging >=24.2
     - pexpect >=4.8,<5.dev0
     - platformdirs >=2.5.0
-    - pyproject-hooks
+    - pyproject_hooks
     - python >=${{ python_min }}
     - python-discovery >=1.1
     - rich >=11.2.0
