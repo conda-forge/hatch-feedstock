@@ -7,4 +7,4 @@ conda_forge_output_validation: true
 conda_build:
   error_overlinking: true
 bot:
-  inspection: update-grayskull
+  inspection: hint-grayskull
